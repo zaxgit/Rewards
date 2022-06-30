@@ -1,42 +1,66 @@
-import React from 'react';
-import {
-  ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
-} from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
-
+import React, { useEffect, useState } from 'react';
+import { Box, Text, Flex, Center } from '@chakra-ui/react';
+import Orders from './components/orders';
 function App() {
-  return (
-    <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
+  const [customers, setCustomers] = useState(null);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
+  // fetch customers list
+  useEffect(() => {
+    fetch(`https://my-json-server.typicode.com/zaxgit/dummy-json/customers`)
+      .then(res => {
+        if (!res.ok) {
+          throw new error`Error 404`();
+        }
+        return res.json();
+      })
+      .then(jsonCustomers => {
+        setCustomers(jsonCustomers);
+        setError(false);
+      })
+      .catch(err => {
+        setError(err.message);
+        setCustomers(null);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
+
+  const dataReady = !loading && customers;
+
+  if (dataReady)
+    return (
+      <Flex justify="space-around" flexWrap="wrap" bg="white" p="10">
+        {customers.map(c => {
+          return (
+            <Box
+              key={c.id}
+              padding="1"
+              marginTop="5"
+              marginBottom="5"
+              borderRadius="10"
+              minHeight="100"
+              bgColor="#141414"
+              color="#f3f3f3"
             >
-              Learn Chakra
-            </Link>
-          </VStack>
-        </Grid>
-      </Box>
-    </ChakraProvider>
-  );
+              <Text
+                bg="#f3f3f3"
+                color="#141414"
+                fontWeight="bold"
+                p="3"
+                borderRadius="10"
+              >
+                {c.name}
+              </Text>
+              <Orders id={c.id} key={c.id} />
+            </Box>
+          );
+        })}
+      </Flex>
+    );
+
+  return null;
 }
 
 export default App;

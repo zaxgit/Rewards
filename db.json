@@ -1,0 +1,230 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "name": "Sadie"
+    },
+    {
+      "id": 2,
+      "name": "Wade"
+    },
+    {
+      "id": 3,
+      "name": "Don"
+    },
+    {
+      "id": 4,
+      "name": "Gary"
+    },
+    {
+      "id": 5,
+      "name": "Boyle"
+    },
+    {
+      "id": 6,
+      "name": "Terry"
+    },
+    {
+      "id": 7,
+      "name": "Jake"
+    },
+    {
+      "id": 8,
+      "name": "Amy"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "total": 50,
+      "customer": 1,
+      "date": "01-01-2022"
+    },
+    {
+      "id": 2,
+      "total": 75,
+      "customer": 1,
+      "date": "01-02-2022"
+    },
+    {
+      "id": 3,
+      "total": 100,
+      "customer": 1,
+      "date": "02-10-2022"
+    },
+    {
+      "id": 4,
+      "total": 150,
+      "customer": 1,
+      "date": "03-15-2022"
+    },
+    {
+      "id": 5,
+      "total": 75,
+      "customer": 2,
+      "date": "01-01-2022"
+    },
+    {
+      "id": 6,
+      "total": 100,
+      "customer": 2,
+      "date": "02-10-2022"
+    },
+    {
+      "id": 7,
+      "total": 150,
+      "customer": 2,
+      "date": "02-01-2022"
+    },
+    {
+      "id": 8,
+      "total": 200,
+      "customer": 2,
+      "date": "03-15-2022"
+    },
+    {
+      "id": 9,
+      "total": 75,
+      "customer": 3,
+      "date": "01-01-2022"
+    },
+    {
+      "id": 10,
+      "total": 150,
+      "customer": 3,
+      "date": "02-10-2022"
+    },
+    {
+      "id": 11,
+      "total": 300,
+      "customer": 3,
+      "date": "03-15-2022"
+    },
+    {
+      "id": 12,
+      "total": 500,
+      "customer": 3,
+      "date": "02-01-2022"
+    },
+    {
+      "id": 13,
+      "total": 36,
+      "customer": 4,
+      "date": "01-01-2022"
+    },
+    {
+      "id": 14,
+      "total": 78,
+      "customer": 4,
+      "date": "02-01-2022"
+    },
+    {
+      "id": 15,
+      "total": 462,
+      "customer": 4,
+      "date": "03-15-2022"
+    },
+    {
+      "id": 16,
+      "total": 200,
+      "customer": 4,
+      "date": "02-10-2022"
+    },
+    {
+      "id": 17,
+      "total": 158,
+      "customer": 5,
+      "date": "02-11-2022"
+    },
+    {
+      "id": 18,
+      "total": 289,
+      "customer": 5,
+      "date": "01-7-2022"
+    },
+    {
+      "id": 19,
+      "total": 200,
+      "customer": 5,
+      "date": "02-13-2022"
+    },
+    {
+      "id": 20,
+      "total": 68,
+      "customer": 5,
+      "date": "03-19-2022"
+    },
+    {
+      "id": 21,
+      "total": 200,
+      "customer": 6,
+      "date": "02-15-2022"
+    },
+    {
+      "id": 22,
+      "total": 154,
+      "customer": 6,
+      "date": "03-18-2022"
+    },
+    {
+      "id": 23,
+      "total": 334,
+      "customer": 6,
+      "date": "01-08-2022"
+    },
+    {
+      "id": 24,
+      "total": 82,
+      "customer": 6,
+      "date": "03-03-2022"
+    },
+    {
+      "id": 25,
+      "total": 34,
+      "customer": 7,
+      "date": "02-19-2022"
+    },
+    {
+      "id": 26,
+      "total": 457,
+      "customer": 7,
+      "date": "01-10-2022"
+    },
+    {
+      "id": 27,
+      "total": 134,
+      "customer": 7,
+      "date": "02-10-2022"
+    },
+    {
+      "id": 28,
+      "total": 221,
+      "customer": 7,
+      "date": "03-14-2022"
+    },
+    {
+      "id": 29,
+      "total": 230,
+      "customer": 8,
+      "date": "03-21-2022"
+    },
+    {
+      "id": 30,
+      "total": 176,
+      "customer": 8,
+      "date": "01-19-2022"
+    },
+    {
+      "id": 31,
+      "total": 241,
+      "customer": 8,
+      "date": "02-15-2022"
+    },
+    {
+      "id": 32,
+      "total": 89,
+      "customer": 8,
+      "date": "01-07-2022"
+    }
+  ]
+}
