@@ -31,9 +31,9 @@ const Orders = props => {
         setMonthlyOrders(groupBy(monthlyTrans, 'month'));
       })
       .catch(err => {
-        new Error(err.message);
         setOrderTotals(null);
         setMonthlyOrders(null);
+        throw err;
       });
   }, []);
 

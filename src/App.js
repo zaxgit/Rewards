@@ -10,7 +10,7 @@ function App() {
     fetch(`https://my-json-server.typicode.com/zaxgit/dummy-json/customers`)
       .then(res => {
         if (!res.ok) {
-          throw new error`Error 404`();
+          throw new Error`Error 404`();
         }
         return res.json();
       })
